@@ -297,3 +297,32 @@ if len(columnas_numericas) >= 2:
 
 else:
     st.warning("Se requieren al menos dos columnas numéricas para el gráfico de dispersión.")
+
+
+# ============================================================
+# Visualización tabular
+# ============================================================
+
+st.divider()
+
+st.header("🧾 Visualización tabular de datos")
+
+cantidad = st.number_input(
+    "Seleccione la cantidad de registros a visualizar",
+    min_value=1,
+    max_value=len(df),
+    value=min(10, len(df))
+)
+
+posicion = st.radio(
+    "Seleccione desde dónde desea visualizar los datos",
+    ["Inicio", "Final"],
+    horizontal=True
+)
+
+try:
+    df_filtrado = filtrar_registros(df, cantidad, posicion)
+    st.dataframe(df_filtrado, use_container_width=True)
+
+except ValueError as error:
+    st.error(str(error))
