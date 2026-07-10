@@ -6,8 +6,8 @@
 
 | Nombre | Carrera |
 |---|---|
-| **Andre Yamada** | Ingeniería en Software — ESPOCH |
-| **Ruperto Cisneros** | Ingeniería en Software — ESPOCH |
+| **Andre Yamada** | Ingeniería en Software |
+| **Ruperto Cisneros** | Ingeniería en Software |
 
 ---
 
